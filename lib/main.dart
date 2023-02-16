@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/recommend': (context) => RecommendScreen(),
       },
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'NotoSansKR'),
     );
   }
 }
