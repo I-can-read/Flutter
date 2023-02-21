@@ -2,7 +2,11 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:i_can_read/screens/home_screen.dart';
 import 'package:i_can_read/screens/camera/camera_screen.dart';
+import 'package:i_can_read/screens/recommend/recommend_result.dart';
 import 'package:i_can_read/screens/recommend/recommend_screen.dart';
+import 'package:i_can_read/screens/recommend/recommend_screen2.dart';
+import 'package:i_can_read/screens/recommend/recommend_screen3.dart';
+import 'package:i_can_read/screens/recommend/recommend_screen4.dart';
 
 List<CameraDescription> cameras = [];
 
@@ -28,6 +32,11 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomeScreen(),
         '/camera': (context) => CameraScreen(),
         '/recommend': (context) => RecommendScreen(),
+        '/recommend2': (context) => RecommendScreen2(),
+        '/recommend3': (context) => RecommendScreen3(),
+        '/recommend4': (context) => RecommendScreen4(),
+        '/recommendResult': (context) => RecommendResultScreen(),
+
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'NotoSansKR'),

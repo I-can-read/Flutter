@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:i_can_read/screens/recommend/recommend_screen2.dart';
+import 'package:i_can_read/screens/recommend/recommend_result.dart';
 
 import 'CustomPageRoute.dart';
 
 
-class RecommendScreen extends StatelessWidget {
-  const RecommendScreen({Key? key}) : super(key: key);
+class RecommendScreen4 extends StatelessWidget {
+  const RecommendScreen4({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(
+      body: Center(
         child: Column(
           children: [
             const SizedBox(height: 40),
@@ -18,9 +18,9 @@ class RecommendScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(height: 10, width: 80, decoration: BoxDecoration(color: Color(0xFFFFD700)),),
-                Container(height: 10, width: 80, decoration: BoxDecoration(color: Color(0xFFD9D9D9)),),
-                Container(height: 10, width: 80, decoration: BoxDecoration(color: Color(0xFFD9D9D9)),),
-                Container(height: 10, width: 80, decoration: BoxDecoration(color: Color(0xFFD9D9D9)),)
+                Container(height: 10, width: 80, decoration: BoxDecoration(color: Color(0xFFFFD700)),),
+                Container(height: 10, width: 80, decoration: BoxDecoration(color: Color(0xFFFFD700)),),
+                Container(height: 10, width: 80, decoration: BoxDecoration(color: Color(0xFFFFD700)),)
               ],
             ),
             const SizedBox(height: 40),
@@ -36,7 +36,7 @@ class RecommendScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   CustomPageRoute(
-                    page: RecommendScreen2(),
+                    page: RecommendResultScreen(),
                   ),);
               },
               style: ElevatedButton.styleFrom(
@@ -48,14 +48,14 @@ class RecommendScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              child: Text('카페인 포함', style: TextStyle(fontSize: 40)),
+              child: Text('우유 포함', style: TextStyle(fontSize: 40)),
             ),
             const SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
                   CustomPageRoute(
-                    page: RecommendScreen2(),
+                    page: RecommendResultScreen(),
                   ),);
               },
               style: ElevatedButton.styleFrom(
@@ -67,7 +67,7 @@ class RecommendScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              child: Text('카페인 미포함', style: TextStyle(fontSize: 40)),
+              child: Text('우유 미포함', style: TextStyle(fontSize: 40)),
             ),
           ],
         ),
