@@ -31,7 +31,7 @@ class RecommendScreen extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 60),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -69,6 +69,20 @@ class RecommendScreen extends StatelessWidget {
               ),
               child: Text('카페인 미포함', style: TextStyle(fontSize: 40)),
             ),
+            const SizedBox(height: 10),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children:[
+                  TextButton(
+                      onPressed: (){Navigator.pop(context);},
+                      child:
+                      const Text('< 처음으로', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black))
+                  )
+                ]
+
+            )
+
+
           ],
         ),
       ),

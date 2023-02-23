@@ -31,7 +31,7 @@ class RecommendScreen3 extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 60),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -69,6 +69,15 @@ class RecommendScreen3 extends StatelessWidget {
               ),
               child: Text('차가움', style: TextStyle(fontSize: 40)),
             ),
+            const SizedBox(height: 10),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children:[
+                  TextButton(
+                      onPressed: (){Navigator.pop(context);},
+                      child: const Text('< 이전 질문',style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black))
+                  )
+                ])
           ],
         ),
       ),
