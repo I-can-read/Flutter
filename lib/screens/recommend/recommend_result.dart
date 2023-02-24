@@ -38,7 +38,7 @@ class RecommendResultScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:const [
-                    Text('<b>아메리카노</b>',
+                    Text('아메리카노',
                       style: TextStyle(
                         fontSize: 40,
                         color: Colors.black,

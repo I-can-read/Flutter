@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+final Uri _url = Uri.parse('https://www.google.com/search?q=%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B8');
 
 class DetailResultTrue extends StatelessWidget {
   @override
@@ -46,24 +47,21 @@ class DetailResultTrue extends StatelessWidget {
                       Icons.coffee,
                       color: Colors.brown,
                       size: 200,),
-                    const SizedBox(height: 15),
-                    const Text('에스프레소에 뜨거운 물을 더한 음료',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black,
-                      ),),
-                    SizedBox(height: 20),
+                    const Padding(padding: EdgeInsets.symmetric(horizontal: 50.0,vertical: 20.0),
+                      child: Text('에스프레소에 뜨거운 물을 더한 음료',
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black),
+                        textAlign: TextAlign.center,
+                        maxLines: 2,
+                      ),
+                    ),
                     TextButton(
-                      onPressed: (){
-                      launch("https://dev-yakuza.posstree.com/ko/flutter/url_launcher/");
-                      },
-                      child: 
-                      const Text('검색 결과 더보기',
-                          style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.blue,
-                          decoration: TextDecoration.underline)),
-                    )
+                      onPressed: _launchUrl,
+                      child: const Text('검색 결과 더보기',
+                      style: TextStyle(color: Colors.blue,
+                      decoration: TextDecoration.underline),),
+                    ),
                   ],
                 )
             ),
@@ -89,5 +87,11 @@ class DetailResultTrue extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> _launchUrl() async {
+    if (!await launchUrl(_url)) {
+      throw Exception('Could not launch $_url');
+    }
   }
 }
