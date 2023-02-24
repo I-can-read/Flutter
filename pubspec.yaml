@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   camera: ^0.10.2+1
   path_provider: ^2.0.12
+  url_launcher: ^6.0.18
 
 dev_dependencies:
   flutter_test:
@@ -88,6 +89,9 @@ flutter:
           weight: 400
         - asset: assets/fonts/NotoSansKR-Light.otf
           weight: 300
+
+  assets:
+    - assets/images/background.png
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
