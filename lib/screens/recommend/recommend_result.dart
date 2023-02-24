@@ -7,7 +7,15 @@ class RecommendResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: Container(
+        alignment: Alignment.topCenter,
+        decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/background.png'),
+          fit:BoxFit.fitWidth,
+          alignment: Alignment.topCenter
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -19,7 +27,7 @@ class RecommendResultScreen extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 30),
             SizedBox(width: 300,height: 450,
             child:
             Card(
@@ -30,17 +38,17 @@ class RecommendResultScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:const [
-                    Text('아메리카노',
+                    Text('<b>아메리카노</b>',
                       style: TextStyle(
                         fontSize: 40,
                         color: Colors.black,
                       ),),
-                    const SizedBox(height: 30),
+                    SizedBox(height: 30),
                     Icon(
                       Icons.coffee,
                       color: Colors.brown,
                       size: 200,),
-                    const SizedBox(height: 30),
+                    SizedBox(height: 30),
                     Text('에스프레소에\n뜨거운 물을 더한 음료',
                       style: TextStyle(
                         fontSize: 20,
@@ -52,7 +60,7 @@ class RecommendResultScreen extends StatelessWidget {
 
             ),
 
-            const SizedBox(height: 60),
+            const SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(
@@ -69,8 +77,9 @@ class RecommendResultScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              child: Text('시작화면 가기', style: TextStyle(fontSize: 20)),
+              child: Text('시작화면 가기', style: TextStyle(fontSize: 30)),
             ),
+            const SizedBox(height: 10)
 
           ],
         ),
