@@ -3,6 +3,7 @@ import 'package:i_can_read/configs/color.dart';
 import 'package:i_can_read/configs/curve_painter.dart';
 import 'package:i_can_read/models/menu.dart';
 import 'package:i_can_read/models/menu_repository.dart';
+import 'package:i_can_read/screens/camera/detailed_result_true.dart';
 
 class ResultScreen extends StatelessWidget {
   ResultScreen({super.key});
@@ -51,6 +52,12 @@ class MenuTile extends StatelessWidget {
       child: ListTile(
         title: Text(menu.name, style: const TextStyle(fontSize: 28)),
         subtitle: Text(menu.description, style: const TextStyle(fontSize: 20)),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => DetailResultTrue()),
+          );
+        },
         leading: AspectRatio(
           aspectRatio: 1,
           child: Image.network(menu.image, width: 100, fit: BoxFit.cover)
