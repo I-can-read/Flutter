@@ -62,12 +62,13 @@ class RecommendScreen extends StatelessWidget {
                 primary: Color(0xFFC6ECCD),
                 onPrimary: Colors.black,
                 minimumSize: const Size(300, 200),
+                maximumSize: const Size(300, 200),
                 padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              child: Text('카페인 미포함', style: TextStyle(fontSize: 40)),
+              child: Text('카페인\n미포함', style: TextStyle(fontSize: 40)),
             ),
             const SizedBox(height: 10),
             Row(
