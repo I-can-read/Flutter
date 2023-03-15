@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:i_can_read/screens/recommend/recommend_result.dart';
 
 import 'CustomPageRoute.dart';
+import 'menu_filter.dart';
 
 
 class RecommendScreen4 extends StatelessWidget {
@@ -34,6 +35,7 @@ class RecommendScreen4 extends StatelessWidget {
             const SizedBox(height: 60),
             ElevatedButton(
               onPressed: () {
+                MenuFilter.isMilk = true;
                 Navigator.of(context).push(
                   CustomPageRoute(
                     page: RecommendResultScreen(),
@@ -53,6 +55,7 @@ class RecommendScreen4 extends StatelessWidget {
             const SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
+                MenuFilter.isMilk = false;
                 Navigator.of(context).push(
                   CustomPageRoute(
                     page: RecommendResultScreen(),

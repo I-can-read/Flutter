@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:i_can_read/screens/recommend/menu_filter.dart';
 import 'package:i_can_read/screens/recommend/recommend_screen2.dart';
 
 import 'CustomPageRoute.dart';
@@ -6,7 +7,6 @@ import 'CustomPageRoute.dart';
 
 class RecommendScreen extends StatelessWidget {
   const RecommendScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +34,7 @@ class RecommendScreen extends StatelessWidget {
             const SizedBox(height: 60),
             ElevatedButton(
               onPressed: () {
+                MenuFilter.isCoffee = true;
                 Navigator.of(context).push(
                   CustomPageRoute(
                     page: RecommendScreen2(),
@@ -53,6 +54,7 @@ class RecommendScreen extends StatelessWidget {
             const SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
+                MenuFilter.isCoffee = false;
                 Navigator.of(context).push(
                   CustomPageRoute(
                     page: RecommendScreen2(),
