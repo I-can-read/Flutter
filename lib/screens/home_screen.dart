@@ -45,11 +45,14 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              child: Column(
-                children: const [
-                  Text('메뉴판 촬영하기', style: TextStyle(fontSize: 28, color: ColorPalette.black10)),
-                  Text('이 가게의 메뉴가 궁금해', style: TextStyle(fontSize: 24, color: ColorPalette.black40, fontWeight: FontWeight.w400))
-                ],
+              child: FittedBox(
+                fit: BoxFit.fitWidth,
+                child: Column(
+                  children: const [
+                    Text('메뉴판 촬영하기', style: TextStyle(fontSize: 28, color: ColorPalette.black10)),
+                    Text('이 가게의 메뉴가 궁금해', style: TextStyle(fontSize: 24, color: ColorPalette.black40, fontWeight: FontWeight.w400))
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -64,11 +67,14 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              child: Column(
-                children: const [
-                  Text('내 음료 취향 알아보기', style: TextStyle(fontSize: 28, color: ColorPalette.black10)),
-                  Text('뭘 먹을지 모르겠어', style: TextStyle(fontSize: 24, color: ColorPalette.black40, fontWeight: FontWeight.w400))
-                ],
+              child: FittedBox(
+                fit: BoxFit.fitWidth,
+                child: Column(
+                  children: const [
+                    Text('내 음료 취향 알아보기', style: TextStyle(fontSize: 28, color: ColorPalette.black10)),
+                    Text('뭘 먹을지 모르겠어', style: TextStyle(fontSize: 24, color: ColorPalette.black40, fontWeight: FontWeight.w400))
+                  ],
+                ),
               ),
             ),
           ],
