@@ -115,6 +115,12 @@ Widget cameraOverlay({required double padding, required double aspectRatio, requ
               margin: EdgeInsets.only(left: horizontalPadding, right: horizontalPadding),
               height: verticalPadding,
               color: color)),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: horizontalPadding * 1.3),
+              child: const Text('사각형에 맞춰서 사진을 찍어주세요', style: TextStyle(color: ColorPalette.primaryGold)),
+              )),
           Container(
             margin: EdgeInsets.symmetric(horizontal: horizontalPadding, vertical: verticalPadding),
             decoration: BoxDecoration(border: Border.all(color: ColorPalette.primaryGold)),
