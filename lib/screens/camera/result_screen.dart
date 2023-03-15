@@ -7,7 +7,11 @@ import 'package:i_can_read/screens/camera/detailed_result_true.dart';
 
 class ResultScreen extends StatelessWidget {
   ResultScreen({super.key});
-  final List<Menu> menus = MenuRepository().getMenu();
+  // final List<Menu> menus = MenuRepository().getMenu();
+  Future<List<Menu>> fetchMenu() async {
+    await Future.delayed(const Duration(seconds: 5));
+    return MenuRepository().getMenu();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,19 +22,38 @@ class ResultScreen extends StatelessWidget {
         centerTitle: true,
         iconTheme: const IconThemeData(color: Colors.black),
       ),
-      body: CustomPaint(
-        painter: CurvePainter(),
-        child: ListView.separated(
-          separatorBuilder: (context, index) {
-            return const SizedBox(height: 20);
-          },
-          itemCount: menus.length,
-          itemBuilder: (context, index) {
-            return MenuTile(menu: menus[index]);
-          },
-          padding: const EdgeInsets.all(15),
-        ),
-      ),
+      body: FutureBuilder<List<Menu>>(
+        future: fetchMenu(),
+        builder: (context, snapshot) {
+          if (snapshot.hasData == false) {
+            return Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    CircularProgressIndicator(),
+                    SizedBox(height: 20),
+                    Text('최대 1분 소요될 수 있습니다.'),
+                  ],
+                )
+            );
+          } else {
+            return CustomPaint(
+              painter: CurvePainter(),
+              child: ListView.separated(
+                separatorBuilder: (context, index) {
+                  return const SizedBox(height: 20);
+                },
+                itemCount: snapshot.data!.length,
+                itemBuilder: (context, index) {
+                  return MenuTile(menu: snapshot.data![index]);
+                },
+                padding: const EdgeInsets.all(15),
+              ),
+            );
+          }
+        },
+      )
+
     );
   }
 }
