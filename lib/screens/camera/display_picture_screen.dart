@@ -35,7 +35,7 @@ class DisplayPictureScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => ResultScreen(),
+                        builder: (context) => ResultScreen(imagePath: imagePath),
                       )
                   );
                 },
