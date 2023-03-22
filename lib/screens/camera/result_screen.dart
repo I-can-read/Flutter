@@ -108,7 +108,7 @@ class MenuTile extends StatelessWidget {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => DetailResultTrue()),
+            MaterialPageRoute(builder: (context) => DetailResultTrue(name: menu.name, description: menu.description, image: menu.image)),
           );
         },
         leading: AspectRatio(
