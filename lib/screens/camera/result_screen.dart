@@ -42,6 +42,9 @@ class ResultScreen extends StatelessWidget {
         backgroundColor: ColorPalette.primaryGold,
         centerTitle: true,
         iconTheme: const IconThemeData(color: Colors.black),
+        actions: [
+          IconButton(onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst), icon: const Icon(Icons.home_filled))
+        ],
       ),
       body: FutureBuilder<List<Menu>>(
         future: getMenu(),

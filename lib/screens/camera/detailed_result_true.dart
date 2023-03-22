@@ -23,12 +23,19 @@ class DetailResultTrue extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(height: 30),
-            const Text('결과 확인',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight:FontWeight.bold ,
-                color: Colors.black,
-              ),
+            Wrap(
+              crossAxisAlignment: WrapCrossAlignment.center,
+              children: [
+                const Text('결과 확인',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight:FontWeight.bold ,
+                    color: Colors.black,
+                  ),
+                ),
+                const SizedBox(width: 5),
+                IconButton(onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst), icon: const Icon(Icons.home_filled)),
+              ],
             ),
             const SizedBox(height: 20),
             SizedBox(width: 300,height: 500,
