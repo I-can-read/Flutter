@@ -59,13 +59,16 @@ class DetailResultTrue extends StatelessWidget {
                     ),
                     const SizedBox(height: 15),
                     Image.network(image, width: 200, height: 250, fit: BoxFit.cover),
-                    Padding(padding: const EdgeInsets.symmetric(horizontal: 50.0,vertical: 20.0),
-                      child: Text(description,
-                        style: const TextStyle(
-                            fontSize: 20,
-                            color: Colors.black),
-                        textAlign: TextAlign.center,
-                        maxLines: 2,
+                    Container(
+                      height: 100,
+                      padding: const EdgeInsets.symmetric(horizontal: 50.0,vertical: 20.0),
+                      child: SingleChildScrollView(
+                        child: Text(description,
+                          style: const TextStyle(
+                              fontSize: 20,
+                              color: Colors.black),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
                     TextButton(
