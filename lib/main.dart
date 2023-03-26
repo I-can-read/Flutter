@@ -1,5 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:i_can_read/screens/home_screen.dart';
 import 'package:i_can_read/screens/camera/camera_screen.dart';
 import 'package:i_can_read/screens/recommend/recommend_result.dart';
@@ -17,6 +18,7 @@ Future<void> main() async {
   } on CameraException catch (e) {
     print('Error in fetching the cameras: $e');
   }
+  await dotenv.load(fileName: '.env');
   runApp(const MyApp());
 }
 
