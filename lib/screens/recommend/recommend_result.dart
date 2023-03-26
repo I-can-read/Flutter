@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:i_can_read/models/recommend_menu.dart';
+import 'package:i_can_read/models/menu.dart';
 import 'package:i_can_read/screens/home_screen.dart';
 import 'package:i_can_read/screens/recommend/menu_filter.dart';
-import '../../models/menu.dart';
+import 'package:i_can_read/models/menu_recommend.dart';
 import 'CustomPageRoute.dart';
 
 class RecommendResultScreen extends StatelessWidget {
@@ -101,11 +101,15 @@ class ShowResultScreen extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children:[
-                      Text(menu.name,
-                        style: const TextStyle(
-                          fontSize: 40,
-                          color: Colors.black,
-                        ),),
+                      FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(menu.name,
+                          style: const TextStyle(
+                            fontSize: 40,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
                       const SizedBox(height: 30),
                       Image.network(menu.image, width: 100, fit: BoxFit.cover),
                       const SizedBox(height: 30),

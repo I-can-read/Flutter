@@ -106,7 +106,15 @@ class MenuTile extends StatelessWidget {
         ],
       ),
       child: ListTile(
-        title: Text(menu.name, style: const TextStyle(fontSize: 28)),
+        title: FittedBox(
+          fit: BoxFit.fitWidth,
+          child: Text(menu.name,
+            style: const TextStyle(
+              fontSize: 28,
+              color: Colors.black,
+            ),
+          ),
+        ),
         subtitle: Text(menu.description, style: const TextStyle(fontSize: 20)),
         onTap: () {
           Navigator.push(
