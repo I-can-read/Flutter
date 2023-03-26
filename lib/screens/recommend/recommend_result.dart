@@ -1,62 +1,61 @@
 import 'package:flutter/material.dart';
+import 'package:i_can_read/models/recommend_menu.dart';
 import 'package:i_can_read/screens/home_screen.dart';
 import 'package:i_can_read/screens/recommend/menu_filter.dart';
-
 import '../../models/menu.dart';
-import '../../models/menu_repository.dart';
 import 'CustomPageRoute.dart';
 
 class RecommendResultScreen extends StatelessWidget {
-  final List<Menu> menus = MenuRepository().getMenu();
+  final List<Menu> menus = RecommendMenu().getMenu();
  @override
   Widget build(BuildContext context) {
    if (MenuFilter.isCoffee && MenuFilter.isHot && MenuFilter.isMilk && MenuFilter.isSweet){
-     return ShowResultScreen(menu: menus[1]);
+     return ShowResultScreen(menu: menus[0]);
    }
    else if(MenuFilter.isCoffee && MenuFilter.isHot && MenuFilter.isMilk && !MenuFilter.isSweet){
-     return ShowResultScreen(menu: menus[2]);
-   }
-   else if(MenuFilter.isCoffee && MenuFilter.isHot && !MenuFilter.isMilk && MenuFilter.isSweet){
-     return ShowResultScreen(menu: menus[3]);
-   }
-   else if(MenuFilter.isCoffee && MenuFilter.isHot && !MenuFilter.isMilk && !MenuFilter.isSweet){
-     return ShowResultScreen(menu: menus[4]);
-   }
-   else if(MenuFilter.isCoffee && !MenuFilter.isHot && MenuFilter.isMilk && MenuFilter.isSweet){
-     return ShowResultScreen(menu: menus[5]);
-   }
-   else if(MenuFilter.isCoffee && !MenuFilter.isHot && MenuFilter.isMilk && !MenuFilter.isSweet){
-     return ShowResultScreen(menu: menus[6]);
-   }
-   else if(MenuFilter.isCoffee && !MenuFilter.isHot && !MenuFilter.isMilk && MenuFilter.isSweet){
-     return ShowResultScreen(menu: menus[7]);
-   }
-   else if(MenuFilter.isCoffee && !MenuFilter.isHot && !MenuFilter.isMilk && !MenuFilter.isSweet){
-     return ShowResultScreen(menu: menus[8]);
-   }
-   else if(!MenuFilter.isCoffee && MenuFilter.isHot && MenuFilter.isMilk && MenuFilter.isSweet){
-     return ShowResultScreen(menu: menus[9]);
-   }
-   else if(!MenuFilter.isCoffee && MenuFilter.isHot && MenuFilter.isMilk && !MenuFilter.isSweet){
-     return ShowResultScreen(menu: menus[10]);
-   }
-   else if(!MenuFilter.isCoffee && MenuFilter.isHot && !MenuFilter.isMilk && MenuFilter.isSweet){
      return ShowResultScreen(menu: menus[1]);
    }
-   else if(!MenuFilter.isCoffee && MenuFilter.isHot && !MenuFilter.isMilk && !MenuFilter.isSweet){
+   else if(MenuFilter.isCoffee && MenuFilter.isHot && !MenuFilter.isMilk && MenuFilter.isSweet){
      return ShowResultScreen(menu: menus[2]);
    }
-   else if(!MenuFilter.isCoffee && !MenuFilter.isHot && MenuFilter.isMilk && MenuFilter.isSweet){
+   else if(MenuFilter.isCoffee && MenuFilter.isHot && !MenuFilter.isMilk && !MenuFilter.isSweet){
      return ShowResultScreen(menu: menus[3]);
    }
-   else if(!MenuFilter.isCoffee && !MenuFilter.isHot && MenuFilter.isMilk && !MenuFilter.isSweet){
+   else if(MenuFilter.isCoffee && !MenuFilter.isHot && MenuFilter.isMilk && MenuFilter.isSweet){
      return ShowResultScreen(menu: menus[4]);
    }
-   else if(!MenuFilter.isCoffee && !MenuFilter.isHot && !MenuFilter.isMilk && MenuFilter.isSweet){
+   else if(MenuFilter.isCoffee && !MenuFilter.isHot && MenuFilter.isMilk && !MenuFilter.isSweet){
      return ShowResultScreen(menu: menus[5]);
    }
-   else if(!MenuFilter.isCoffee && !MenuFilter.isHot && !MenuFilter.isMilk && !MenuFilter.isSweet){
+   else if(MenuFilter.isCoffee && !MenuFilter.isHot && !MenuFilter.isMilk && MenuFilter.isSweet){
      return ShowResultScreen(menu: menus[6]);
+   }
+   else if(MenuFilter.isCoffee && !MenuFilter.isHot && !MenuFilter.isMilk && !MenuFilter.isSweet){
+     return ShowResultScreen(menu: menus[7]);
+   }
+   else if(!MenuFilter.isCoffee && MenuFilter.isHot && MenuFilter.isMilk && MenuFilter.isSweet){
+     return ShowResultScreen(menu: menus[8]);
+   }
+   else if(!MenuFilter.isCoffee && MenuFilter.isHot && MenuFilter.isMilk && !MenuFilter.isSweet){
+     return ShowResultScreen(menu: menus[9]);
+   }
+   else if(!MenuFilter.isCoffee && MenuFilter.isHot && !MenuFilter.isMilk && MenuFilter.isSweet){
+     return ShowResultScreen(menu: menus[10]);
+   }
+   else if(!MenuFilter.isCoffee && MenuFilter.isHot && !MenuFilter.isMilk && !MenuFilter.isSweet){
+     return ShowResultScreen(menu: menus[11]);
+   }
+   else if(!MenuFilter.isCoffee && !MenuFilter.isHot && MenuFilter.isMilk && MenuFilter.isSweet){
+     return ShowResultScreen(menu: menus[12]);
+   }
+   else if(!MenuFilter.isCoffee && !MenuFilter.isHot && MenuFilter.isMilk && !MenuFilter.isSweet){
+     return ShowResultScreen(menu: menus[13]);
+   }
+   else if(!MenuFilter.isCoffee && !MenuFilter.isHot && !MenuFilter.isMilk && MenuFilter.isSweet){
+     return ShowResultScreen(menu: menus[14]);
+   }
+   else if(!MenuFilter.isCoffee && !MenuFilter.isHot && !MenuFilter.isMilk && !MenuFilter.isSweet){
+     return ShowResultScreen(menu: menus[15]);
    }
    else{
      return ShowResultScreen(menu: menus[0]);
