@@ -1,6 +1,8 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'package:i_can_read/screens/home_screen.dart';
 import 'package:i_can_read/screens/camera/camera_screen.dart';
 import 'package:i_can_read/screens/recommend/recommend_result.dart';
@@ -19,6 +21,7 @@ Future<void> main() async {
     print('Error in fetching the cameras: $e');
   }
   await dotenv.load(fileName: '.env');
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 

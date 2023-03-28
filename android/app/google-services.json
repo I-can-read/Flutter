@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1070348317689",
+    "project_id": "i-can-read-ecf5d",
+    "storage_bucket": "i-can-read-ecf5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070348317689:android:adf8f99058f1c8b0454328",
+        "android_client_info": {
+          "package_name": "com.example.i_can_read"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070348317689-62d923nknt56t5obseo729v2o3jmcbl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa1i4UpHP0XUG2gZJflPoZFGrQoGBtfXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070348317689-62d923nknt56t5obseo729v2o3jmcbl7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1070348317689-cdh2munvt6uf6s10jol3k8uq849gcuec.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.iCanRead"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
