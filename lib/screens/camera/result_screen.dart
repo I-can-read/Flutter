@@ -107,10 +107,10 @@ class MenuTile extends StatelessWidget {
       ),
       child: ListTile(
         title: FittedBox(
-          fit: BoxFit.fitWidth,
+          fit: BoxFit.scaleDown,
           child: Text(menu.name,
             style: const TextStyle(
-              fontSize: 28,
+              fontSize: 32,
               color: Colors.black,
             ),
           ),
@@ -127,6 +127,7 @@ class MenuTile extends StatelessWidget {
           child: Image.network(menu.image, width: 100, fit: BoxFit.cover)
         ),
         contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        visualDensity: const VisualDensity(vertical: 4),
       ),
     );
   }

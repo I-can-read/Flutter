@@ -48,12 +48,15 @@ class DetailResultTrue extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    FittedBox(
-                      fit: BoxFit.fitWidth,
-                      child: Text(name,
-                        style: const TextStyle(
-                          fontSize: 40,
-                          color: Colors.black,
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text(name,
+                          style: const TextStyle(
+                            fontSize: 40,
+                            color: Colors.black,
+                          ),
                         ),
                       ),
                     ),
