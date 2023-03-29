@@ -127,10 +127,7 @@ class ShowResultScreen extends StatelessWidget {
             const SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(
-                  CustomPageRoute(
-                    page: HomeScreen(),
-                  ),);
+                Navigator.of(context).popUntil((route) => route.isFirst);
               },
               style: ElevatedButton.styleFrom(
                 primary: Color(0xFFFFD700),
